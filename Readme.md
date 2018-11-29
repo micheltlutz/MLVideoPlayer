@@ -31,6 +31,14 @@ Example: ViewController > viewDidLoad
 <p align="center">
  <img width="598" height="446"src="docs/img/THUMB.PNG">
  </p>
+ 
+ 
+ 
+## Docs
+
+[Documentation](http://htmlpreview.github.io/?https://github.com/micheltlutz/MLVideoPlayer/blob/develop/docs/index.html)
+
+MLLineChart Docs (100% documented)
 
 ## Requirements
 
@@ -168,7 +176,7 @@ Issues and pull requests are welcome!
 
 ## Author
 
-Michel Lutz [@michel_lutz](https://twitter.com/michel_lutz)
+Michel Lutz [@michel_lutz](https://twitter.com/michel_lutz) - [My Site](http://micheltlutz.me)
 
 ## License
 
