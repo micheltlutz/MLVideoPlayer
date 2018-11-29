@@ -1,0 +1,8 @@
+author: Michel Lutz
+author_url: https://twitter.com/michel_lutz
+github_url: https://github.com/micheltlutz/MLVideoPlayer
+root_url: https://micheltlutz.github.io/MLVideoPlayer/
+module: MLVideoPlayer
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-workspace, 'MLVideoPlayer.xcworkspace', -scheme, 'MLVideoPlayer-iOS']
