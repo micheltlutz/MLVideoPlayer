@@ -1,25 +1,40 @@
 # MLVideoPlayer
 
+<p align="center">
+ <img width="300" height="300"src="docs/img/MLVIDEOPLAYER.png">
+ </p>
+
 [![Platforms](https://img.shields.io/cocoapods/p/MLVideoPlayer.svg)](https://cocoapods.org/pods/MLVideoPlayer)
 [![License](https://img.shields.io/cocoapods/l/MLVideoPlayer.svg)](https://raw.githubusercontent.com/micheltlutz/MLVideoPlayer/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/MLVideoPlayer.svg)](https://cocoapods.org/pods/MLVideoPlayer)
-
-[![Travis](https://img.shields.io/travis/micheltlutz/MLVideoPlayer/master.svg)](https://travis-ci.org/micheltlutz/MLVideoPlayer/branches)
 [![SwiftFrameworkTemplate](https://img.shields.io/badge/SwiftFramework-Template-red.svg)](http://github.com/RahulKatariya/SwiftFrameworkTemplate)
 
 Simple Video player write in swift
 
+- [Usage](#usage)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
 - [License](#license)
+
+## Usage
+Example: ViewController > viewDidLoad
+
+ ````swift 
+ let mLVideoPlayer = MLVideoPlayer(url: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", width: 280, height: 200)
+ self.addChild(mLVideoPlayer.viewController)
+ self.view.addSubview(mLVideoPlayer.viewController.view)
+ mLVideoPlayer.viewController.didMove(toParent: self)
+ ````
+<p align="center">
+ <img width="598" height="446"src="docs/img/THUMB.PNG">
+ </p>
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 10.0+ / tvOS 9.0+ 
 - Xcode 10.0+
 
 ## Installation
@@ -38,10 +53,10 @@ To integrate MLVideoPlayer into your Xcode project using CocoaPods, specify it i
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '10.0'
 use_frameworks!
 
-pod 'MLVideoPlayer', '~> 0.0.1'
+pod 'MLVideoPlayer', '~> 1.0.0'
 ```
 
 Then, run the following command:
@@ -67,7 +82,7 @@ $ brew install carthage
 To integrate MLVideoPlayer into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "micheltlutz/MLVideoPlayer" ~> 0.0.1
+github "micheltlutz/MLVideoPlayer" ~> 1.0.0
 ```
 
 </details>
@@ -85,7 +100,7 @@ import PackageDescription
 let package = Package(
     name: "HelloMLVideoPlayer",
     dependencies: [
-        .package(url: "https://github.com/micheltlutz/MLVideoPlayer.git", .upToNextMajor(from: "0.0.1"))
+        .package(url: "https://github.com/micheltlutz/MLVideoPlayer.git", .upToNextMajor(from: "1.0.0"))
     ],
     targets: [
         .target(name: "HelloMLVideoPlayer", dependencies: ["MLVideoPlayer"])
@@ -146,7 +161,6 @@ $ git submodule update --init --recursive
 
 </p></details>
 
-## Usage
 
 ## Contributing
 

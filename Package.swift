@@ -20,7 +20,7 @@ let package = Package(
     targets: [
         .target(
             name: "MLVideoPlayer",
-            dependencies: [],
+            dependencies: ["UIKit", "AVKit", "AVFoundation"],
             path: "Sources"),
         .testTarget(
             name: "MLVideoPlayerTests",

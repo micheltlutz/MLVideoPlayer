@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MLVideoPlayer  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="MLVideoPlayer  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">MLVideoPlayer Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">MLVideoPlayer Reference</a>
+        <img id="carat" src="img/carat.png" />
+        MLVideoPlayer  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/MLVideoPlayer.html">MLVideoPlayer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='mlvideoplayer' class='heading'>MLVideoPlayer</h1>
+
+<p><a href="https://cocoapods.org/pods/MLVideoPlayer"><img src="https://img.shields.io/cocoapods/p/MLVideoPlayer.svg" alt="Platforms"></a>
+<a href="https://raw.githubusercontent.com/micheltlutz/MLVideoPlayer/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/MLVideoPlayer.svg" alt="License"></a></p>
+
+<p><a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://cocoapods.org/pods/MLVideoPlayer"><img src="https://img.shields.io/cocoapods/v/MLVideoPlayer.svg" alt="CocoaPods compatible"></a></p>
+
+<p><a href="https://travis-ci.org/micheltlutz/MLVideoPlayer/branches"><img src="https://img.shields.io/travis/micheltlutz/MLVideoPlayer/master.svg" alt="Travis"></a>
+<a href="http://github.com/RahulKatariya/SwiftFrameworkTemplate"><img src="https://img.shields.io/badge/SwiftFramework-Template-red.svg" alt="SwiftFrameworkTemplate"></a></p>
+
+<p>Simple Video player write in swift</p>
+
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 10.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+</li>
+<li>Xcode 10.0+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='dependency-managers' class='heading'>Dependency Managers</h3>
+
+<details>
+  <summary><strong>CocoaPods</strong></summary>
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+&ldquo;`bash
+$ gem install cocoapods
+&rdquo;`
+
+To integrate MLVideoPlayer into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+&ldquo;`ruby
+source &lsquo;https://github.com/CocoaPods/Specs.git&rsquo;
+platform :ios, &lsquo;10.0&rsquo;
+use_frameworks!
+
+pod &lsquo;MLVideoPlayer&rsquo;, &lsquo;~> 1.0.0&rsquo;
+&rdquo;`
+
+Then, run the following command:
+
+&ldquo;`bash
+$ pod install
+&rdquo;`
+
+</details>
+
+<details>
+  <summary><strong>Carthage</strong></summary>
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+&ldquo;`bash
+$ brew update
+$ brew install carthage
+&rdquo;`
+
+To integrate MLVideoPlayer into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+&ldquo;`ogdl
+github &quot;micheltlutz/MLVideoPlayer&rdquo; ~> 1.0.0
+&ldquo;`
+
+</details>
+
+<details>
+  <summary><strong>Swift Package Manager</strong></summary>
+
+To use MLVideoPlayer as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+
+&rdquo;` swift
+// swift-tools-version:4.2
+
+import PackageDescription
+
+let package = Package(
+    name: &ldquo;HelloMLVideoPlayer&rdquo;,
+    dependencies: [
+        .package(url: &ldquo;https://github.com/micheltlutz/MLVideoPlayer.git&rdquo;, .upToNextMajor(from: &ldquo;1.0.0&rdquo;))
+    ],
+    targets: [
+        .target(name: &ldquo;HelloMLVideoPlayer&rdquo;, dependencies: [&ldquo;MLVideoPlayer&rdquo;])
+    ]
+)
+&ldquo;`
+</details>
+<h3 id='manually' class='heading'>Manually</h3>
+
+<p>If you prefer not to use either of the aforementioned dependency managers, you can integrate MLVideoPlayer into your project manually.</p>
+
+<details>
+  <summary><strong>Git Submodules</strong></summary><p>
+
+- Open up Terminal, `cd` into your top-level project directory, and run the following command &quot;if&rdquo; your project is not initialized as a git repository:
+
+&ldquo;`bash
+$ git init
+&rdquo;`
+
+- Add MLVideoPlayer as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+
+&ldquo;`bash
+$ git submodule add https://github.com/micheltlutz/MLVideoPlayer.git
+$ git submodule update &ndash;init &ndash;recursive
+&rdquo;`
+
+- Open the new `MLVideoPlayer` folder, and drag the `MLVideoPlayer.xcodeproj` into the Project Navigator of your application&rsquo;s Xcode project.
+
+    > It should appear nested underneath your application&rsquo;s blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+
+- Select the `MLVideoPlayer.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the &ldquo;Targets&rdquo; heading in the sidebar.
+- In the tab bar at the top of that window, open the &ldquo;General&rdquo; panel.
+- Click on the `+` button under the &ldquo;Embedded Binaries&rdquo; section.
+- You will see two different `MLVideoPlayer.xcodeproj` folders each with two different versions of the `MLVideoPlayer.framework` nested inside a `Products` folder.
+
+    > It does not matter which `Products` folder you choose from.
+
+- Select the `MLVideoPlayer.framework`.
+
+- And that&rsquo;s it!
+
+> The `MLVideoPlayer.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+
+</p></details>
+
+<details>
+  <summary><strong>Embedded Binaries</strong></summary><p>
+
+- Download the latest release from https://github.com/micheltlutz/MLVideoPlayer/releases
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the &ldquo;Targets&rdquo; heading in the sidebar.
+- In the tab bar at the top of that window, open the &ldquo;General&rdquo; panel.
+- Click on the `+` button under the &ldquo;Embedded Binaries&rdquo; section.
+- Add the downloaded `MLVideoPlayer.framework`.
+- And that&rsquo;s it!
+
+</p></details>
+<h2 id='usage' class='heading'>Usage</h2>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>Issues and pull requests are welcome!</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Michel Lutz <a href="https://twitter.com/michel_lutz">@michel_lutz</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>MLVideoPlayer is released under the MIT license. See <a href="https://github.com/micheltlutz/MLVideoPlayer/blob/master/LICENSE">LICENSE</a> for details.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="http://micheltlutz.me" target="_blank" rel="external">Michel Lutz</a>. All rights reserved. (Last updated: 2018-11-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
