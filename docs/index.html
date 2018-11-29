@@ -42,28 +42,51 @@
             
             <h1 id='mlvideoplayer' class='heading'>MLVideoPlayer</h1>
 
+<p align="center">
+ <img width="300" height="300"src="docs/img/MLVIDEOPLAYER.png">
+ </p>
+
 <p><a href="https://cocoapods.org/pods/MLVideoPlayer"><img src="https://img.shields.io/cocoapods/p/MLVideoPlayer.svg" alt="Platforms"></a>
 <a href="https://raw.githubusercontent.com/micheltlutz/MLVideoPlayer/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/MLVideoPlayer.svg" alt="License"></a></p>
 
 <p><a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-<a href="https://cocoapods.org/pods/MLVideoPlayer"><img src="https://img.shields.io/cocoapods/v/MLVideoPlayer.svg" alt="CocoaPods compatible"></a></p>
-
-<p><a href="https://travis-ci.org/micheltlutz/MLVideoPlayer/branches"><img src="https://img.shields.io/travis/micheltlutz/MLVideoPlayer/master.svg" alt="Travis"></a>
+<a href="https://cocoapods.org/pods/MLVideoPlayer"><img src="https://img.shields.io/cocoapods/v/MLVideoPlayer.svg" alt="CocoaPods compatible"></a>
 <a href="http://github.com/RahulKatariya/SwiftFrameworkTemplate"><img src="https://img.shields.io/badge/SwiftFramework-Template-red.svg" alt="SwiftFrameworkTemplate"></a></p>
 
 <p>Simple Video player write in swift</p>
 
 <ul>
+<li><a href="#usage">Usage</a></li>
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage</a></li>
 <li><a href="#license">License</a></li>
 </ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Example: ViewController &gt; viewDidLoad</p>
+<pre class="highlight swift"><code> <span class="k">let</span> <span class="nv">mLVideoPlayer</span> <span class="o">=</span> <span class="kt">MLVideoPlayer</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">280</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+ <span class="k">self</span><span class="o">.</span><span class="nf">addChild</span><span class="p">(</span><span class="n">mLVideoPlayer</span><span class="o">.</span><span class="n">viewController</span><span class="p">)</span>
+ <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">mLVideoPlayer</span><span class="o">.</span><span class="n">viewController</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
+ <span class="n">mLVideoPlayer</span><span class="o">.</span><span class="n">viewController</span><span class="o">.</span><span class="nf">didMove</span><span class="p">(</span><span class="nv">toParent</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+<p align="center">
+ <img width="598" height="446"src="docs/img/THUMB.PNG">
+ </p>
+
+<p> 
+ 
+ </p>
+<h2 id='docs' class='heading'>Docs</h2>
+
+<p><a href="http://htmlpreview.github.io/?https://github.com/micheltlutz/MLVideoPlayer/blob/develop/docs/index.html">Documentation</a></p>
+
+<p>MLLineChart Docs (100% documented)</p>
 <h2 id='requirements' class='heading'>Requirements</h2>
 
 <ul>
-<li>iOS 10.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+</li>
+<li>iOS 10.0+</li>
 <li>Xcode 10.0+</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
@@ -188,13 +211,12 @@ $ git submodule update &ndash;init &ndash;recursive
 - And that&rsquo;s it!
 
 </p></details>
-<h2 id='usage' class='heading'>Usage</h2>
 <h2 id='contributing' class='heading'>Contributing</h2>
 
 <p>Issues and pull requests are welcome!</p>
 <h2 id='author' class='heading'>Author</h2>
 
-<p>Michel Lutz <a href="https://twitter.com/michel_lutz">@michel_lutz</a></p>
+<p>Michel Lutz <a href="https://twitter.com/michel_lutz">@michel_lutz</a> - <a href="http://micheltlutz.me">My Site</a></p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>MLVideoPlayer is released under the MIT license. See <a href="https://github.com/micheltlutz/MLVideoPlayer/blob/master/LICENSE">LICENSE</a> for details.</p>

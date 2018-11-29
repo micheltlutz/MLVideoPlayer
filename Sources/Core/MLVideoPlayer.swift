@@ -46,7 +46,7 @@ open class MLVideoPlayer: NSObject {
     ///Indicates AVPlayer
     open private(set) var player: AVPlayer!
     ///Indicates a UIActivityIndicatorView
-    private let activityIndicator  = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white)
+    private let activityIndicator  = UIActivityIndicatorView(style: .white)
     ///Indicates a KVO for player
     private var observer: NSKeyValueObservation?
 
@@ -56,7 +56,7 @@ open class MLVideoPlayer: NSObject {
      - Parameter url: String url for Vídeo
      - Parameter width: CGFloat for viewController.view.frame
      - Parameter height: CGFloat for viewController.view.frame
-     - Parameter playInFullScreen: Bool? default true for iOS 11.0+ automátic set true to entersFullScreenWhenPlaybackBegins and exitsFullScreenWhenPlaybackEnds
+     - Parameter playInFullScreen: Bool? default true for iOS 11.0+ automatic set true to entersFullScreenWhenPlaybackBegins and exitsFullScreenWhenPlaybackEnds
      */
     convenience public init(url: String, width: CGFloat, height: CGFloat, playInFullScreen: Bool? = true) {
         self.init()

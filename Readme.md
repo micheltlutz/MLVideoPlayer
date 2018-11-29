@@ -42,7 +42,7 @@ MLLineChart Docs (100% documented)
 
 ## Requirements
 
-- iOS 10.0+ / tvOS 9.0+ 
+- iOS 10.0+
 - Xcode 10.0+
 
 ## Installation
